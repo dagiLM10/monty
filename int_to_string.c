@@ -2,7 +2,7 @@
 
 char *get_int(int num);
 unsigned int _abs(int);
-int get_numbase__buff(unsigned int num, unsigned int base,);
+int get_numbase_len(unsigned int num, unsigned int base);
 void fill_numbase_buff(unsigned int num, unsigned int base,
 			char *buff, int buff_size);
 
@@ -17,7 +17,7 @@ char *get_int(int num)
 	unsigned int temp;
 	int length = 0;
 	long num_l = 0;
-	char 8ret;
+	char *ret;
 
 	temp = _abs(num);
 	length = get_numbase_len(temp, 10);
@@ -29,7 +29,7 @@ char *get_int(int num)
 		return (NULL);
 
 	fill_numbase_buff(temp, 10, ret, length);
-	if (num < 0 || num_1 < 0)
+	if (num < 0 || num_l < 0)
 		ret[0] = '-';
 
 	return (ret);
@@ -62,9 +62,9 @@ int get_numbase_len(unsigned int num, unsigned int base)
 	while (num > base - 1)
 	{
 		l++;
-		num /- base;
+		num /= base;
 	}
-	return (len);
+	return (l);
 }
 
 /**

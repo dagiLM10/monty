@@ -4,7 +4,7 @@ int short_stack_error(unsigned int line_number, char *op);
 int div_error(unsigned int line_number);
 int pop_error(unsigned int line_number);
 int div_error(unsigned int line_number);
-int pchar_error(usigned int line_number, char *message);
+int pchar_error(unsigned int line_number, char *message);
 
 /**
  * pop_error - Prints pop error messages for empty stacks.
@@ -40,7 +40,7 @@ int pint_error(unsigned int line_number)
  */
 int short_stack_error(unsigned int line_number, char *op)
 {
-	fprintf(stderr, "L%u: can't %s, stack too short\n", line_number, op)
+	fprintf(stderr, "L%u: can't %s, stack too short\n", line_number, op);
 	return (EXIT_FAILURE);
 }
 
@@ -66,6 +66,6 @@ int div_error(unsigned int line_number)
  */
 int pchar_error(unsigned int line_number, char *message)
 {
-	fprintf(stderr, "L%u: can't pchar, %s\n" line_number, message);
+	fprintf(stderr, "L%d: can't pchar, %s\n", line_number, message);
 	return (EXIT_FAILURE);
 }

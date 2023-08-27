@@ -1,16 +1,16 @@
 #include "monty.h"
 
-void monty_rotl(stack_t **stack, unsiged int line_number);
-void monty_rotr(stack_t **stack, unsiged int line_number);
-void monty_stack(stack_t **stack, unsiged int line_number);
-void monty_queue(stack_t **stack, unsiged int line_number);
+void monty_rotl(stack_t **stack, unsigned int line_number);
+void monty_rotr(stack_t **stack, unsigned int line_number);
+void monty_stack(stack_t **stack, unsigned int line_number);
+void monty_queue(stack_t **stack, unsigned int line_number);
 
 /**
  * monty_rotl - Rotates stack_t linked list's top value to the bottom.
  * @stack: stack_t linked list's top mode node pointer.
  * @line_number: Monty bytecodes file of the current working number.
  */
-void monty_rotl(stack_t **stack, unsiged int line_number)
+void monty_rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top, *bottom;
 
@@ -36,7 +36,7 @@ void monty_rotl(stack_t **stack, unsiged int line_number)
  * @stack: stack_t linked list's top mode node pointer.
  * @line_number: Monty bytecodes file of the current working number.
  */
-void monty_rotr(stack_t **stack, unsiged int line_number)
+void monty_rotr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top, *bottom;
 
@@ -62,7 +62,7 @@ void monty_rotr(stack_t **stack, unsiged int line_number)
  * @stack: stack_t linked list's top mode node pointer.
  * @line_number: Monty bytecodes file of the current working number.
  */
-void monty_satck(stack_t **stack, unsiged int line_number)
+void monty_satck(stack_t **stack, unsigned int line_number)
 {
 	(*stack)->n = STACK;
 	(void)line_number;
@@ -73,7 +73,7 @@ void monty_satck(stack_t **stack, unsiged int line_number)
  * @stack: stack_t linked list's top mode node pointer.
  * @line_number: Monty bytecodes file of the current working number.
  */
-void monty_queue(stack_t **stack, unsiged int line_number)
+void monty_queue(stack_t **stack, unsigned int line_number)
 {
 	(*stack)->n = QUEUE;
 	(void)line_number;
