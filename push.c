@@ -36,3 +36,4 @@ void f_push(stack_t **head, unsigned int counter)
 	else
 		addqueue(head, n);
 }
+}
